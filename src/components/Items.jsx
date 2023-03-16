@@ -1,11 +1,13 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Item from './Item';
+import { Context } from '../App';
 
-const Items = ({items}) => {
+const Items = () => {
+    const state = useContext(Context);
     return (
         <main>
-            {items.map((element) => (
-                <Item key={ element.id} item={ element} />
+            {state.items.map((element) => (
+                <Item key={element.id} item={element}  />
             ))}
         </main>
     );

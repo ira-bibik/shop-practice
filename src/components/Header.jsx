@@ -18,7 +18,6 @@ export default function Header() {
         />
         {cartOpen && (
           <div className="shop-cart">
-            
           </div>
         )}
       </div>
