@@ -7,10 +7,13 @@ import Items from './components/Items';
 const App = () => {
   const [items] = useState(furniture);
   const [orders, setOrders] = useState([]);
+  let [cartOpen, setCartOpen] = useState(false);
   const value = {
     items,
     orders,
     setOrders,
+    cartOpen,
+    setCartOpen
   };
   // function AddToOrder(item) {
   //   console.log(orders);
