@@ -21,6 +21,8 @@ header {
     position: relative;
 }
 
+ /* Navbar */
+
 header .logo {
     font-weight: 600;
     font-size: 20px;
@@ -41,6 +43,8 @@ header ul.nav li {
 header ul.nav li:hover {
     opacity: .5;
 }
+ 
+/* Shop cart */
 
 header .shop-cart-button {
     float:right;
@@ -94,6 +98,30 @@ header .shop-cart .item p {
     font-weight: 600;
 }
 
+header .shop-cart .item .delete-icon {
+    color: #ca5252;
+    float:right;
+    position: relative;
+    top: -25px;
+    cursor: pointer;
+    transition: color, transform 500ms ease;
+}
+
+header .shop-cart .item .delete-icon:hover {
+    color: #a20606;
+    transform: scale(1.5);
+}
+
+header .shop-cart .summa {
+    float: left;
+    width: 100%;
+    font-weight: 600;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+/* Header presentation */
+
 header .presentation {
     margin: 50px 0;
     background: url('./img/1649165522.jpeg') no-repeat;
@@ -134,6 +162,8 @@ main {
     flex-wrap: wrap;
     justify-content: space-evenly;
 }
+
+/* Items */
 
 main .item {
     width: 30%;
