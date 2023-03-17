@@ -3,26 +3,31 @@ import { FaShoppingCart } from 'react-icons/fa';
 import { Context } from '../App';
 import Order from './Order';
 
-const showOrders = (orders) => {
-  return (
-    <div>
-      {orders.map((el) => (
-        <Order key={el.id} item={el} />
-      ))}
-    </div>
-  );
-}
-
-const showNothing = () => {
-  return (
-    <div className="empty">
-      <h2>No orders!</h2>
-    </div>
-  )
-}
 
 export default function Header() {
   const state = useContext(Context);
+  
+  const showOrders = (orders) => {
+    let summa = 0;
+    state.orders.forEach((el) => (summa += Number.parseFloat(el.price)));
+    return (
+      <div>
+        {orders.map((el) => (
+          <Order key={el.id} item={el} />
+        ))}
+        <p className="summa">Summa: {new Intl.NumberFormat().format(summa)}$</p>
+      </div>
+    );
+  };
+
+  const showNothing = () => {
+    return (
+      <div className="empty">
+        <h2>No orders!</h2>
+      </div>
+    );
+  };
+
   return (
     <header>
       <div>
